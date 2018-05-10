@@ -25,9 +25,6 @@ class HomePage extends Component {
             Header: 'Name',
             accessor: 'name'
         }, {
-            Header: 'Circulating Supply ',
-            accessor: 'available_supply',
-        }, {
             Header: 'Symbol',
             accessor: 'symbol',
             Cell: props => <strong>{props.value}</strong>
@@ -39,6 +36,10 @@ class HomePage extends Component {
             Header: 'Price',
             accessor: 'price_usd',
             Cell: props => <span>$ {props.value}</span>
+        }, {
+            id: 'circulatingSupply',
+            Header: 'Circulating Supply ',
+            accessor: d => d.available_supply + " " + d.symbol,
         }, {
             Header: 'Volume (24 hours)',
             accessor: '24h_volume_usd',
