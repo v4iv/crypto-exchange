@@ -3,15 +3,15 @@
  */
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import asyncComponent from "../AsyncComponent";
-
-const AsyncHomePage = asyncComponent(() => import('../../containers/HomePage'));
+import HomePageContainer from '../../containers/HomePage';
+import NotFoundPage from "../NotFoundPage";
 
 const Main = () => {
     return (
         <div>
             <Switch>
-                <Route exact path="/" component={AsyncHomePage}/>
+                <Route exact path="/" component={HomePageContainer}/>
+                <Route component={NotFoundPage}/>
             </Switch>
         </div>
     );

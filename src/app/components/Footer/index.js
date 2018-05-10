@@ -14,7 +14,11 @@ const Footer = () => {
                            rel="noopener noreferrer">
                             The Leaky Cauldron Blog
                         </a>
-                    </strong> 2018. All Rights Reserved.
+                    </strong> 2018. All Rights Reserved. Powered by <a href="https://coinmarketcap.com"
+                                                                       target="_blank"
+                                                                       rel="noopener noreferrer">
+                        CoinMarketCap
+                    </a>
                     </p>
                 </div>
             </div>
