@@ -5,9 +5,11 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className="navbar is-dark" aria-label="main navigation">
+        <nav className="navbar is-primary" aria-label="main navigation">
             <div className="navbar-brand">
-                <span className="navbar-item">Crypto&nbsp;Exchange</span>
+                <span className="navbar-item">
+                    Crypto Exchange
+                </span>
             </div>
         </nav>
     );

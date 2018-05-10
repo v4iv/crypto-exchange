@@ -50,7 +50,7 @@ class HomePage extends Component {
                     {cryptoList.loading
                         ? <Loader/>
                         : (cryptoList.error)
-                            ? <ErrorPanel errors={[`Crypto Currency List - ${cryptoList.metadata.error}`]}/>
+                            ? <ErrorPanel errors={[`Crypto Currency List - ${cryptoList.error}`]}/>
                             : <ReactTable className="table" data={cryptoList.data} columns={columns}/>
                     }
                 </div>

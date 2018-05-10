@@ -1,41 +1,41 @@
 /**
- * Created by vaibhav on 9/5/18
+ * Created by vaibhav on 10/5/18
  */
-import {CRYPTO_LIST_FAILURE, CRYPTO_LIST_REQUEST, CRYPTO_LIST_SUCCESS} from "./actions";
+import {CRYPTO_TICKER_FAILURE, CRYPTO_TICKER_REQUEST, CRYPTO_TICKER_SUCCESS} from "./actions";
 
 const INITIAL_STATE = {
-    cryptoList: {
-        data: [],
+    cryptoTicker: {
+        data: {},
         error: null,
         loading: false
     }
 };
 
-export default function cryptoListReducer(state = INITIAL_STATE, action) {
+export default function cryptoTickerReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case CRYPTO_LIST_REQUEST:
+        case CRYPTO_TICKER_REQUEST:
             return {
                 ...state,
-                cryptoList: {
-                    data: [],
+                cryptoTicker: {
+                    data: {},
                     error: null,
                     loading: true
                 }
             };
-        case CRYPTO_LIST_SUCCESS:
+        case CRYPTO_TICKER_SUCCESS:
             return {
                 ...state,
-                cryptoList: {
+                cryptoTicker: {
                     data: action.payload,
                     error: null,
                     loading: false
                 }
             };
-        case CRYPTO_LIST_FAILURE:
+        case CRYPTO_TICKER_FAILURE:
             return {
                 ...state,
-                cryptoList: {
-                    data: [],
+                cryptoTicker: {
+                    data: {},
                     error: action.payload,
                     loading: false
                 }
