@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
-import './assets/css/bulma.min.css';
-import './assets/css/main.css';
+import './assets/sass/main.sass';
 import 'react-table/react-table.css'
 import App from './app';
 import configureStore from './core/store';
